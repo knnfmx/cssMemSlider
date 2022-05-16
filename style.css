@@ -2,12 +2,83 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
 }
 
 :root {
   --app-bg: #262626;
+  --slider-border: #299399;
+  --slider-controls: #dddddd;
 }
 
 body {
   background-color: var(--app-bg);
+  font-size: 16px;
+}
+
+.slider-wrapper {
+  width: 768px;
+  margin: 40px auto;
+}
+
+.slider {
+  display: flex;
+  width: 40rem;
+  height: 30rem;
+  border: 10px solid var(--slider-border);
+  border-radius: 10px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides {
+  width: inherit;
+  height: inherit;
+  flex-shrink: 0;
+}
+.slider__hidden-btn {
+  display: none;
+}
+
+.controls-btn {
+  cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	transition: background ease-in-out .5s;
+  -webkit-transition: background ease-in-out .5s;
+	-moz-transition: background ease-in-out .5s;
+	-o-transition: background ease-in-out .5s;
+}
+
+.controls-btn:after {
+  border: 2px solid var(--slider-controls);
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+
+.controls-btn:hover, 
+#slide-1:checked ~ .controls controls-btn:nth-of-type(1),
+#slide-2:checked ~ .controls controls-btn:nth-of-type(2),
+#slide-3:checked ~ .controls controls-btn:nth-of-type(3),
+#slide-4:checked ~ .controls controls-btn:nth-of-type(4),
+#slide-5:checked ~ .controls controls-btn:nth-of-type(5) {
+	background: var(--slider-controls);
 }
