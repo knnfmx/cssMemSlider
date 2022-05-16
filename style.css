@@ -25,8 +25,8 @@ body {
 
 .slider {
   display: flex;
-  width: 40rem;
-  height: 30rem;
+  width: 640px;
+  height: 480px;
   border: 10px solid var(--slider-border);
   border-radius: 10px;
   margin: 0 auto;
@@ -38,8 +38,8 @@ body {
 }
 
 .slides {
-	height: inherit;
-	width: inherit;
+	width: calc(640px - 20px);
+	height: calc(480px - 20px);
   flex-shrink: 0;
   opacity: 0;
 	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
@@ -48,12 +48,31 @@ body {
 	-o-transition: transform ease-in-out .5s, opacity ease-in-out .5s;
 }
 
-.slide-1 {
-  background-image: url(assets/images/mem.jpg);
+.slides {
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
+}
+.slide-1 {
+  background-image: url(assets/images/memes1.jpg);
+
+}
+.slide-2 {
+  background-image: url(assets/images/memes2.jpg);
+}
+.slide-3 {
+  background-image: url(assets/images/memes3.png);
+}
+.slide-4 {
+  background-image: url(assets/images/memes4.png);
+}
+.slide-5 {
+  background-image: url(assets/images/memes5.jpg);
 }
 
+.slider-text {
+  font-family: Bangers;
+}
 .controls-btn {
   cursor: pointer;
 	display: inline-block;
@@ -104,10 +123,11 @@ body {
 }
 
 #slide-2:checked ~ .slider > .slides {
-  -webkit-transform: translateX(-640px);
-	-moz-transform: translateX(-640px);
-	-o-transform: translateX(-640px);
-  transform: translateX(-640px);
+  opacity: 1;
+  -webkit-transform: translateX(-620px);
+	-moz-transform: translateX(-620px);
+	-o-transform: translateX(-620px);
+  transform: translateX(-620px);
   transition: 0.5s ease-in-out;
 }
 #slide-2:checked ~ .slider-controls > .controls-btn[for="slide-2"] {
@@ -116,10 +136,11 @@ body {
 }
 
 #slide-3:checked ~ .slider > .slides {
-  -webkit-transform: translateX(-1280px);
-	-moz-transform: translateX(-1280px);
-	-o-transform: translateX(-1280px);
-  transform: translateX(-1280px);
+  opacity: 1;
+  -webkit-transform: translateX(-1240px);
+	-moz-transform: translateX(-1240px);
+	-o-transform: translateX(-1240px);
+  transform: translateX(-1240px);
   transition: 0.5s ease-in-out;
 }
 #slide-3:checked ~ .slider-controls > .controls-btn[for="slide-3"] {
@@ -128,10 +149,11 @@ body {
 }
 
 #slide-4:checked ~ .slider > .slides {
-  -webkit-transform: translateX(-1920px);
-	-moz-transform: translateX(-1920px);
-	-o-transform: translateX(-1920px);
-  transform: translateX(-1920px);
+  opacity: 1;
+  -webkit-transform: translateX(-1860px);
+	-moz-transform: translateX(-1860px);
+	-o-transform: translateX(-1860px);
+  transform: translateX(-1860px);
   transition: 0.5s ease-in-out;
 }
 #slide-4:checked ~ .slider-controls > .controls-btn[for="slide-4"] {
@@ -140,10 +162,11 @@ body {
 }
 
 #slide-5:checked ~ .slider > .slides {
-  -webkit-transform: translateX(-2560px);
-	-moz-transform: translateX(-2560px);
-	-o-transform: translateX(-2560px);
-  transform: translateX(-2560px);
+  opacity: 1;
+  -webkit-transform: translateX(-2500px);
+	-moz-transform: translateX(-2500px);
+	-o-transform: translateX(-2500px);
+  transform: translateX(-2500px);
   transition: 0.5s ease-in-out;
 }
 #slide-5:checked ~ .slider-controls > .controls-btn[for="slide-5"] {
