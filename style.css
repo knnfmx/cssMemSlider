@@ -11,6 +11,7 @@
   --app-bg: #262626;
   --slider-border: #299399;
   --slider-controls: #dddddd;
+  --memes-text: #ffffff;
 }
 
 body {
@@ -80,15 +81,19 @@ body {
 
 .slider-text-wrapper {
   display: flex;
-  width: 50%;
+  width: 65%;
+  height: 15%;
   overflow: hidden;
 }
 
 .slider-text {
-  font-family: Bangers;
-  flex-shrink: 0;
   display: none;
+  width: 100%;
+  font-family: Bangers;
+  font-size: 24px;
+  flex-shrink: 0;
   opacity: 0;
+  color: var(--memes-text);
 }
 
 
