@@ -74,6 +74,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 640px;
+  margin: 20px auto 0;
 }
 
 .slider-text-wrapper {
@@ -82,12 +84,11 @@ body {
   overflow: hidden;
 }
 
-
-
 .slider-text {
   font-family: Bangers;
   flex-shrink: 0;
   display: none;
+  opacity: 0;
 }
 
 
@@ -95,7 +96,7 @@ body {
   cursor: pointer;
 	display: inline-block;
 	height: 8px;
-	margin: 25px 12px 0 16px;
+	margin: 0 12px 0 16px;
 	position: relative;
 	width: 8px;
 	border-radius: 50%;
@@ -141,6 +142,8 @@ body {
 }
 #slide-1:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-1 {
   display: block;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
 }
 
 #slide-2:checked ~ .slider > .slides {
@@ -157,6 +160,8 @@ body {
 }
 #slide-2:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-2 {
   display: block;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
 }
 
 #slide-3:checked ~ .slider > .slides {
@@ -173,6 +178,8 @@ body {
 }
 #slide-3:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-3 {
   display: block;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
 }
 
 #slide-4:checked ~ .slider > .slides {
@@ -189,6 +196,8 @@ body {
 }
 #slide-4:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-4 {
   display: block;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
 }
 
 #slide-5:checked ~ .slider > .slides {
@@ -205,4 +214,6 @@ body {
 }
 #slide-5:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-5 {
   display: block;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
 }
