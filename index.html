@@ -6,8 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Mem Slider</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <main>
+    <div class="slider-wrapper">
+      <input type="radio" name="point" id="slide-1" checked>
+      <input type="radio" name="point" id="slide-2">
+      <input type="radio" name="point" id="slide-3">
+      <input type="radio" name="point" id="slide-4">
+      <input type="radio" name="point" id="slide-5">
+      <div class="slider">
+        <div class="slides slide-1"></div>
+        <div class="slides slide-2"></div>
+        <div class="slides slide-3"></div>
+        <div class="slides slide-4"></div>
+        <div class="slides slide-5"></div>
+      </div>	
+      <div class="controls">
+        <label for="slide-1"></label>
+        <label for="slide-2"></label>
+        <label for="slide-3"></label>
+        <label for="slide-4"></label>
+        <label for="slide-5"></label>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
