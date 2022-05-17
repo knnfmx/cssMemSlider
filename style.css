@@ -16,13 +16,13 @@
 
 body {
   background-color: var(--app-bg);
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .slider-wrapper {
   position: relative;
   max-width: 40rem;
-  margin: 40px auto;
+  margin: 2.5rem auto;
 }
 
 .slider {
@@ -75,7 +75,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 20px auto 0;
+  margin: 1.25rem auto 0;
 }
 
 .slider-text-wrapper {
@@ -99,10 +99,10 @@ body {
 .controls-btn {
   cursor: pointer;
 	display: inline-block;
-	height: 8px;
-	margin: 0 12px 0 16px;
+	height: 0.5rem;
+	margin: 0 0.75rem 0 1rem;
 	position: relative;
-	width: 8px;
+	width: 0.5rem;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -114,14 +114,14 @@ body {
 }
 
 .controls-btn:after {
-  border: 2px solid var(--slider-controls);
+  border: 0.125rem solid var(--slider-controls);
 	content: " ";
 	display: block;
-	height: 12px;
-	left: -4px;
+	height: 0.75rem;
+	left: -0.25rem;
 	position: absolute;
-	top: -4px;
-	width: 12px;
+	top: -0.25rem;
+	width: 0.75rem;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -239,7 +239,7 @@ body {
 @media (max-width: 768px) {
   .slider-wrapper {
     max-width: 25rem;
-    margin: 20px auto;
+    margin: 1.25rem auto;
   }
   .slider {
     width: 100%;
@@ -253,11 +253,11 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin: 20px auto 0;
+    width: 95%;
+    margin: 1.25rem auto 0;
   }
   .slider-text-wrapper {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
     align-self: start;
   }
