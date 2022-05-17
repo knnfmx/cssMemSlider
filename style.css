@@ -132,6 +132,15 @@ body {
 	background: var(--slider-controls);
 }
 
+@keyframes text-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #slide-1:checked ~ .slider > .slides {
   opacity: 1;
 	-webkit-transform: translateX(0);
@@ -147,6 +156,7 @@ body {
 #slide-1:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-1 {
   display: block;
   opacity: 1;
+  animation: text-animation 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
@@ -165,6 +175,7 @@ body {
 #slide-2:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-2 {
   display: block;
   opacity: 1;
+  animation: text-animation 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
@@ -183,6 +194,7 @@ body {
 #slide-3:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-3 {
   display: block;
   opacity: 1;
+  animation: text-animation 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
@@ -201,6 +213,7 @@ body {
 #slide-4:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-4 {
   display: block;
   opacity: 1;
+  animation: text-animation 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
@@ -219,6 +232,7 @@ body {
 #slide-5:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-5 {
   display: block;
   opacity: 1;
+  animation: text-animation 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
@@ -244,6 +258,7 @@ body {
   }
   .slider-text-wrapper {
     margin-top: 20px;
+    width: 100%;
     align-self: start;
   }
   .slider-text {
