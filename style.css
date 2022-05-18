@@ -11,6 +11,7 @@
   --app-bg: #262626;
   --slider-border: #299399;
   --slider-controls: #dddddd;
+  --slider-controls-hover: #424242;
   --memes-text: #ffffff;
 }
 
@@ -126,10 +127,14 @@ body {
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
 }
 
-.controls-btn:hover {
-	background: var(--slider-controls);
+.controls-btn:hover.controls-btn:after {
+	border: 0.125rem solid var(--slider-controls-hover);
 }
 
 @keyframes text-animation {
@@ -148,16 +153,23 @@ body {
 	-o-transform: translateX(0);
   transform: translateX(0);
   transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
 }
 #slide-1:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-1"] {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-1:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-1 {
   display: block;
   opacity: 1;
   animation: text-animation 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
 }
 
 #slide-2:checked ~ .slider > .slides {
@@ -172,6 +184,7 @@ body {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-2:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-2 {
   display: block;
   opacity: 1;
@@ -191,6 +204,7 @@ body {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-3:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-3 {
   display: block;
   opacity: 1;
@@ -210,6 +224,7 @@ body {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-4:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-4 {
   display: block;
   opacity: 1;
@@ -229,6 +244,7 @@ body {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-5:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-5 {
   display: block;
   opacity: 1;
