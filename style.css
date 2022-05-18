@@ -11,6 +11,8 @@
   --app-bg: #262626;
   --slider-border: #299399;
   --slider-controls: #dddddd;
+  --slider-controls-hover: #424242;
+  --slider-controls-active: #ffffff;
   --memes-text: #ffffff;
 }
 
@@ -93,16 +95,49 @@ body {
   flex-shrink: 0;
   opacity: 0;
   color: var(--memes-text);
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 1rem;
 }
 
 
+.click-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .controls-btn {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.125rem solid var(--slider-controls);
+  background-color: transparent;
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+}
+
+.controls-btn > span {
   cursor: pointer;
-	display: inline-block;
 	height: 0.5rem;
-	margin: 0 0.75rem 0 1rem;
-	position: relative;
 	width: 0.5rem;
+  background-color: transparent;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -113,23 +148,12 @@ body {
 	-o-transition: background ease-in-out .5s;
 }
 
-.controls-btn:after {
-  border: 0.125rem solid var(--slider-controls);
-	content: " ";
-	display: block;
-	height: 0.75rem;
-	left: -0.25rem;
-	position: absolute;
-	top: -0.25rem;
-	width: 0.75rem;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
+.click-wrapper:hover > .controls-btn > span {
+	background-color: var(--slider-controls-hover);
 }
 
-.controls-btn:hover {
-	background: var(--slider-controls);
+.click-wrapper:active > .controls-btn > span {
+  background-color: var(--slider-controls-active);
 }
 
 @keyframes text-animation {
@@ -148,16 +172,19 @@ body {
 	-o-transform: translateX(0);
   transform: translateX(0);
   transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
 }
 #slide-1:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-1"] {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-1:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-1 {
   display: block;
   opacity: 1;
   animation: text-animation 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 #slide-2:checked ~ .slider > .slides {
@@ -167,16 +194,19 @@ body {
 	-o-transform: translateX(-100%);
   transform: translateX(-100%);
   transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
 }
 #slide-2:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-2"] {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-2:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-2 {
   display: block;
   opacity: 1;
   animation: text-animation 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 #slide-3:checked ~ .slider > .slides {
@@ -186,16 +216,19 @@ body {
 	-o-transform: translateX(-200%);
   transform: translateX(-200%);
   transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
 }
 #slide-3:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-3"] {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-3:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-3 {
   display: block;
   opacity: 1;
   animation: text-animation 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 #slide-4:checked ~ .slider > .slides {
@@ -205,16 +238,19 @@ body {
 	-o-transform: translateX(-300%);
   transform: translateX(-300%);
   transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
 }
 #slide-4:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-4"] {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-4:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-4 {
   display: block;
   opacity: 1;
   animation: text-animation 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 #slide-5:checked ~ .slider > .slides {
@@ -224,16 +260,19 @@ body {
 	-o-transform: translateX(-400%);
   transform: translateX(-400%);
   transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
 }
 #slide-5:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-5"] {
   background: var(--slider-controls);
   opacity: 1;
 }
+
 #slide-5:checked ~ .slider-memes > .slider-text-wrapper > .slider-text-5 {
   display: block;
   opacity: 1;
   animation: text-animation 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
 }
 
 @media (max-width: 768px) {
