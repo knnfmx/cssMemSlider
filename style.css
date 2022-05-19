@@ -107,15 +107,16 @@ body {
 }
 
 
-.click-wrapper {
+.controls-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 1.5rem;
   height: 1.5rem;
+  cursor: pointer;
 }
 
-.controls-btn {
+.click-wrapper {
 	display: flex;
   align-items: center;
   justify-content: center;
@@ -133,7 +134,7 @@ body {
 	-o-transition: 0.5s ease-in-out;
 }
 
-.controls-btn > .controls-btn__inner {
+.controls-btn__inner {
   cursor: pointer;
 	height: 0.5rem;
 	width: 0.5rem;
@@ -148,12 +149,16 @@ body {
 	-o-transition: background ease-in-out .5s;
 }
 
-.click-wrapper:hover > .controls-btn > .controls-btn__inner {
+.controls-btn:hover > .click-wrapper > .controls-btn__inner {
 	background-color: var(--slider-controls-hover);
 }
 
-.controls-btn:active > .controls-btn__inner {
-  background-color: var(--slider-controls-active);
+.controls-btn:active > .click-wrapper {
+  border: 0.125rem solid var(--slider-controls-active);
+  transition: 0.1s ease-in-out;
+  -webkit-transition: 0.1s ease-in-out;
+	-moz-transition: 0.1s ease-in-out;
+	-o-transition: 0.1s ease-in-out;
 }
 
 @keyframes text-animation {
@@ -176,7 +181,7 @@ body {
 	-moz-transition: 0.5s ease-in-out;
 	-o-transition: 0.5s ease-in-out;
 }
-#slide-1:checked ~ .slider-memes > .slider-controls > .click-wrapper > .controls-btn[for="slide-1"] > .controls-btn__inner{
+#slide-1:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-1"] > .click-wrapper > .controls-btn__inner{
   background-color: var(--slider-controls);
   opacity: 1;
 }
@@ -198,7 +203,7 @@ body {
 	-moz-transition: 0.5s ease-in-out;
 	-o-transition: 0.5s ease-in-out;
 }
-#slide-2:checked ~ .slider-memes > .slider-controls > .click-wrapper >  .controls-btn[for="slide-2"] > .controls-btn__inner{
+#slide-2:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-2"] > .click-wrapper > .controls-btn__inner{
   background-color: var(--slider-controls);
   opacity: 1;
 }
@@ -220,7 +225,7 @@ body {
 	-moz-transition: 0.5s ease-in-out;
 	-o-transition: 0.5s ease-in-out;
 }
-#slide-3:checked ~ .slider-memes > .slider-controls > .click-wrapper > .controls-btn[for="slide-3"] > .controls-btn__inner {
+#slide-3:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-3"] > .click-wrapper > .controls-btn__inner {
   background-color: var(--slider-controls);
   opacity: 1;
 }
@@ -242,7 +247,7 @@ body {
 	-moz-transition: 0.5s ease-in-out;
 	-o-transition: 0.5s ease-in-out;
 }
-#slide-4:checked ~ .slider-memes > .slider-controls > .click-wrapper > .controls-btn[for="slide-4"] > .controls-btn__inner {
+#slide-4:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-4"] > .click-wrapper > .controls-btn__inner {
   background-color: var(--slider-controls);
   opacity: 1;
 }
@@ -264,7 +269,7 @@ body {
 	-moz-transition: 0.5s ease-in-out;
 	-o-transition: 0.5s ease-in-out;
 }
-#slide-5:checked ~ .slider-memes > .slider-controls > .click-wrapper > .controls-btn[for="slide-5"] > .controls-btn__inner{
+#slide-5:checked ~ .slider-memes > .slider-controls > .controls-btn[for="slide-5"] > .click-wrapper > .controls-btn__inner{
   background-color: var(--slider-controls);
   opacity: 1;
 }
